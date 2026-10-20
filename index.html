@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Méqui</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Meu Méqui 🍔</h2>
+        <button id="cadastro">Cadastrar</button>
+    </header>
+
+    <main>
+        <div class="conteudo">
+            <h1>Meu Méqui</h1>
+            <p>Momentos deliciosos começam aqui!</p>
+            <button onclick="document.querySelector('#formulario').scrollIntoView({behavior:'smooth'})">
+                Ver cardápio
+            </button>
+        </div>
+
+        <div class="destaque">
+            <h2>Nosso cardápio</h2>
+            <p>Cadastre seus lanches favoritos!</p>
+        </div>
+    </main>
+
+    <section id="formulario">
+        <h2 id="titulo">Cadastrar produto</h2>
+        <form id="form">
+            <input type="hidden" id="id">
+            <input id="nome" placeholder="Nome do lanche" required>
+            <input id="descricao" placeholder="Descrição do lanche" required>
+            <input id="preco" type="number" step="0.01" min="0.01" placeholder="Preço (R$)" required>
+            <button type="submit">Salvar produto</button>
+        </form>
+    </section>
+
+    <section class="cardapio">
+        <h2>Cardápio</h2>
+        <div id="lista"></div>
+    </section>
+
+    <footer>Todos os direitos reservados.</footer>
+    <script src="main.js"></script>
+</body>
+</html>
